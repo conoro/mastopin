@@ -1,6 +1,6 @@
 # MastoPin
 
-A Serverless AWS Lambda function that runs every 15 minutes, checks your
+MastoPin is a Serverless AWS Lambda function that runs every 15 minutes, checks your
 Mastodon public updates and saves them to Pinboard
 
 ## Setup
