@@ -1,0 +1,35 @@
+{
+  "name": "mastopin",
+  "description": "Your Mastondon updates saved to Pinboard",
+  "version": "1.0.0",
+  "author": {
+    "name": "Conor O'Neill",
+    "email": "conor@conoroneill.com",
+    "url": "https://github.com/conoro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conoro/mastopin.git"
+  },
+  "keywords": [
+    "mastodon",
+    "pinboard",
+    "backup"
+  ],
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "dependencies": {
+    "aws-sdk": "^2.149.0",
+    "feedparser": "^2.2.1",
+    "he": "^1.1.1",
+    "html-to-text": "^3.3.0",
+    "request": "^2.81.0",
+    "serverless-dynamodb-local": "^0.2.26",
+    "serverless-offline": "^3.16.0",
+    "throttled-request": "^0.1.1"
+  }
+}
