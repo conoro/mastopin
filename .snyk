@@ -1,0 +1,24 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:cryptiles:20180710':
+    - serverless-offline > hapi > cryptiles:
+        reason: None given
+        expires: '2018-12-27T06:48:21.616Z'
+    - serverless-offline > hapi > iron > cryptiles:
+        reason: None given
+        expires: '2018-12-27T06:48:21.616Z'
+    - serverless-offline > hapi > statehood > cryptiles:
+        reason: None given
+        expires: '2018-12-27T06:48:21.616Z'
+    - serverless-offline > hapi > statehood > iron > cryptiles:
+        reason: None given
+        expires: '2018-12-27T06:48:21.616Z'
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - serverless-offline > jsonwebtoken > joi > topo > hoek:
+        patched: '2018-11-27T06:47:35.626Z'
+    - serverless-offline > jsonwebtoken > joi > hoek:
+        patched: '2018-11-27T06:47:35.626Z'
