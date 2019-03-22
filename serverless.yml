@@ -17,7 +17,7 @@ custom:
       
 provider:
   name: aws
-  runtime: nodejs6.10
+  runtime: nodejs8.10
   environment:
     DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
     MASTOPIN_PINBOARD_APIKEY: ${file(./mastopin.env.yml):dev.MASTOPIN_PINBOARD_APIKEY}
