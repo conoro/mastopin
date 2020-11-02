@@ -26,7 +26,7 @@
     "aws-sdk": "^2.178.0",
     "feedparser": "^2.2.1",
     "he": "^1.1.1",
-    "html-to-text": "^3.3.0",
+    "html-to-text": "^6.0.0",
     "request": "^2.84.0",
     "serverless-dynamodb-local": "^0.2.26",
     "serverless-offline": "^3.16.0",
