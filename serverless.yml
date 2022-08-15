@@ -1,7 +1,5 @@
 service: mastonpin-mastodon-to-pinboard
 
-frameworkVersion: ">=1.1.0 <2.0.0"
-
 plugins:
   - serverless-dynamodb-local
   - serverless-offline
@@ -17,9 +15,9 @@ custom:
       
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs16.x
   environment:
-    DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
+    DYNAMODB_TABLE: ${self:service}-${sls:stage}
     MASTOPIN_PINBOARD_APIKEY: ${file(./mastopin.env.yml):dev.MASTOPIN_PINBOARD_APIKEY}
     MASTOPIN_MASTODON_URL: ${file(./mastopin.env.yml):dev.MASTOPIN_MASTODON_URL}
   iamRoleStatements:
@@ -31,7 +29,7 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
-      Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
+      Resource: "arn:aws:dynamodb:${aws:region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
 
 functions:
   check:

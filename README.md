@@ -23,6 +23,8 @@ cd mastopin
 ```
 npm install -g serverless
 npm install
+serverless plugin install -n serverless-dynamodb-local
+serverless plugin install -n serverless-offline
 serverless deploy
 ```
 
